@@ -21,6 +21,12 @@ public class Example2 {
         Vehicle veh = context.getBean("tesla", Vehicle.class);
         System.out.println("Vehicle name from Spring Context is: " + veh.getName());
 
+        Vehicle veh1 = context.getBean("mercedes", Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh1.getName());
+
+        Vehicle veh2 = context.getBean("audia7", Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh2.getName());
+
         /*
         We don’t need to do any explicit casting while fetching a bean from context.
         Spring is smart enough to look for a bean of the type you requested in its context.
