@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Primary;
 @ComponentScan(basePackages = "com.example.beans")
 public class ProjectConfig {
 
-    //@Bean
+    @Bean
     public Vehicle getVehicle() {
         Vehicle vehicle = new Vehicle();
         vehicle.setName("Audix7");
@@ -19,10 +19,10 @@ public class ProjectConfig {
     }
 
     @Bean
-    public Person getPerson() {
+    public Person getPerson(Vehicle vehicle) {
         Person person = new Person();
         person.setName("Mohani");
-        person.setVehicle(getVehicle());
+        person.setVehicle(vehicle);
         return person;
     }
 }
