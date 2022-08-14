@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-//@Component
+@Component
 public class Vehicle {
 
-    private String name;
+    private String name = "cooper";
 
     public Vehicle() {
         System.out.println("Vehicle Instance initialition");
