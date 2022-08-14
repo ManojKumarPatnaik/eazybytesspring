@@ -6,10 +6,16 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-//@Component
+@Component
 public class Vehicle {
 
     private String name = "cooper";
+
+    @Autowired
+    private Tyre tyre;
+
+    @Autowired
+    private Sound sound;
 
     public Vehicle() {
         System.out.println("Vehicle Instance initialition");
@@ -23,4 +29,19 @@ public class Vehicle {
         this.name = name;
     }
 
- }
+    public Tyre getTyre() {
+        return tyre;
+    }
+
+    public void setTyre(Tyre tyre) {
+        this.tyre = tyre;
+    }
+
+    public Sound getSound() {
+        return sound;
+    }
+
+    public void setSound(Sound sound) {
+        this.sound = sound;
+    }
+}
